@@ -211,6 +211,66 @@ tr.fraud-row td::before {
 tr:hover td::before {
     animation: pixelate 1s infinite alternate;
 }
+.alert-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.alert-item {
+    background-color: var(--card);
+    padding: 16px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    position: relative;
+}
+.alert-item .badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: var(--alert);
+    color: #FFFFFF;
+    padding: 4px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 800;
+    animation: pixelate 1s infinite alternate;
+}
+.alert-item i {
+    font-size: 24px;
+    color: var(--alert);
+}
+.action-buttons {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+#trans-details p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.pagination {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+}
+#badges {
+    display: flex;
+    gap: 16px;
+    margin-top: 24px;
+}
+.badge {
+    background-color: var(--accent);
+    color: #FFFFFF;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+.badge i {
+    margin-right: 8px;
+}
 @keyframes pixelate {
     to { filter: blur(1px); }
 }
@@ -230,5 +290,8 @@ tr:hover td::before {
     }
     .stats-grid {
         grid-template-columns: 1fr;
+    }
+    .action-buttons {
+        flex-direction: column;
     }
 }

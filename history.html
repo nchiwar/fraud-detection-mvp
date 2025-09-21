@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard - History</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>FraudGuard</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="history.html" aria-current="page">History</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="reports.html">Reports</a>
+                <a href="details.html">Details</a>
+                <a href="settings.html">Settings</a>
+                <button id="dark-toggle" role="button" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="material-card">
+            <h3>Fraud History</h3>
+            <button id="export-history" class="btn ripple" role="button">Export History as CSV</button>
+            <canvas id="history-chart"></canvas>
+            <table id="history-table" aria-label="Fraud history">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div class="pagination">
+                <button id="prev-page" class="btn ripple" role="button">Previous</button>
+                <button id="next-page" class="btn ripple" role="button">Next</button>
+            </div>
+            <div id="badges">
+                <!-- Badges loaded dynamically -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

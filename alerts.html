@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard - Alerts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>FraudGuard</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="history.html">History</a>
+                <a href="alerts.html" aria-current="page">Alerts</a>
+                <a href="reports.html">Reports</a>
+                <a href="details.html">Details</a>
+                <a href="settings.html">Settings</a>
+                <button id="dark-toggle" role="button" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="material-card">
+            <h3>Fraud Alerts</h3>
+            <form id="alert-filter">
+                <label for="search-id">Search by ID:</label>
+                <input type="text" id="search-id" aria-label="Search by transaction ID">
+                <label for="sort-severity">Sort by:</label>
+                <select id="sort-severity" aria-label="Sort alerts">
+                    <option value="fraudScore">Fraud Score</option>
+                    <option value="date">Date</option>
+                </select>
+                <button type="submit" class="btn ripple" role="button">Filter</button>
+            </form>
+            <div id="alert-list" class="alert-list" role="list"></div>
+            <p>Resolved Alerts: <span id="resolved-count">0</span> <i class="fas fa-trophy"></i></p>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard - Details</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>FraudGuard</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="history.html">History</a>
+                <a href="alerts.html">Alerts</a>
+                <a href="reports.html">Reports</a>
+                <a href="details.html" aria-current="page">Details</a>
+                <a href="settings.html">Settings</a>
+                <button id="dark-toggle" role="button" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="material-card">
+            <h3>Transaction Details</h3>
+            <div id="trans-details">
+                <p><i class="fas fa-info-circle"></i> ID: <span id="trans-id"></span></p>
+                <p>Amount: $<span id="trans-amount"></span></p>
+                <p>Date: <span id="trans-date"></span></p>
+                <p>Type: <span id="trans-type"></span></p>
+                <p>Fraud Score: <span id="trans-fraud"></span></p>
+                <p>Status: <span id="trans-status"></span></p>
+            </div>
+            <canvas id="trans-chart"></canvas>
+            <div class="action-buttons">
+                <button id="mark-false" class="btn ripple" role="button">Mark False Positive</button>
+                <button id="escalate" class="btn ripple" role="button">Escalate</button>
+                <input type="text" id="notes" placeholder="Add notes..." aria-label="Transaction notes">
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
