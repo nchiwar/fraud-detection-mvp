@@ -1,0 +1,1 @@
+Built a fraud detection web MVP dashboard with advanced JavaScript data processing, Chart.js visualizations, web workers for efficient anomaly detection, and PWA capabilities, targeting fintech recruiters for secure analytics solutions
