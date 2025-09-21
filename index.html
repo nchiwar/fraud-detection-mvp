@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard - Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>FraudGuard</h1>
+            <nav>
+                <a href="index.html" aria-current="page">Home</a>
+                <a href="dashboard.html">Dashboard</a>
+                <a href="reports.html">Reports</a>
+                <a href="settings.html">Settings</a>
+                <button id="dark-toggle" role="button" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+            </nav>
+        </div>
+    </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Real-Time Fraud Detection</h2>
+            <p>Monitor transactions, flag anomalies, and secure your fintech platform.</p>
+        </div>
+    </section>
+    <div class="container">
+        <div class="material-card">
+            <h3>Transaction Summary</h3>
+            <div class="stats-grid">
+                <div><i class="fas fa-chart-line"></i> Total Transactions: <span id="total-trans">0</span></div>
+                <div><i class="fas fa-exclamation-triangle"></i> Flagged Anomalies: <span id="flagged-anomalies">0</span></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

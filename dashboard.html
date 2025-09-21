@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection Dashboard - Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>FraudGuard</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="dashboard.html" aria-current="page">Dashboard</a>
+                <a href="reports.html">Reports</a>
+                <a href="settings.html">Settings</a>
+                <button id="dark-toggle" role="button" aria-label="Toggle dark mode"><i class="fas fa-sun"></i></button>
+            </nav>
+        </div>
+    </header>
+    <div class="container">
+        <div class="material-card">
+            <h3>Transaction Dashboard</h3>
+            <form id="filter-form">
+                <label for="date-range">Date Range:</label>
+                <input type="date" id="date-range" aria-label="Select date range">
+                <label for="trans-type">Transaction Type:</label>
+                <select id="trans-type" aria-label="Select transaction type">
+                    <option value="all">All</option>
+                    <option value="credit">Credit</option>
+                    <option value="debit">Debit</option>
+                    <option value="transfer">Transfer</option>
+                </select>
+                <button type="submit" class="btn ripple" role="button">Apply Filters</button>
+            </form>
+            <canvas id="trend-chart"></canvas>
+            <canvas id="anomaly-chart"></canvas>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
